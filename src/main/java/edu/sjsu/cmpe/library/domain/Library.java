@@ -37,8 +37,8 @@ public class Library
 		if(books[isbn-1] == null)
 			return false;
 		books[isbn-1] = null;
-		authors_map.remove(isbn-1);
-		reviews_map.remove(isbn-1);
+		authors_map.remove(isbn);
+		reviews_map.remove(isbn);
 		return true;
 	}
 	public Boolean updateBook(int isbn, Book book)
