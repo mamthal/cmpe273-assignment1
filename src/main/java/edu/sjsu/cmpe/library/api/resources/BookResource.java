@@ -63,8 +63,8 @@ public class BookResource {
 	bookResponse.addLink(new LinkDto("view-book", "/books/" + book.getIsbn(),"GET"));
 	bookResponse.addLink(new LinkDto("update-book",	"/books/" + book.getIsbn(),"PUT"));
 	bookResponse.addLink(new LinkDto("delete-book","/books/" + book.getIsbn(),"DELETE"));
-	bookResponse.addLink(new LinkDto("create-review","/books/" + book.getIsbn(),"POST"));
-	bookResponse.addLink(new LinkDto("view-all-reviews","/books" + book.getIsbn(),"GET"));
+	bookResponse.addLink(new LinkDto("create-review","/books/" + book.getIsbn() + "/reviews/","POST"));
+	bookResponse.addLink(new LinkDto("view-all-reviews","/books/" + book.getIsbn() + "/reviews/","GET"));
 	return Response.status(200).entity(bookResponse).build();
     }
    
